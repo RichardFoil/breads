@@ -12,6 +12,8 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 // MIDDLEWARE
 app.use(express.static('public'))
+// MIDDLEWARE
+app.use(express.urlencoded({extended: true}))
 
 
 // ROUTES
