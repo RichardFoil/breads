@@ -13,6 +13,6 @@ const breadSchema = new Schema({
 
 
 //model and export
-const Bread = mongoose.model('Bread', breadSchema)
+const Bread = mongoose.model('breads', breadSchema)
 
 module.exports = Bread
