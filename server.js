@@ -4,6 +4,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 // Dependencies
 const mongoose = require('mongoose')
+const baker = require('./controllers/bakers_controller.js')
 
 
 
@@ -38,7 +39,11 @@ app.get('/', (req, res) => {
 // Breads
 const breadsController = require('./controllers/breads_controller.js')
 app.use('/breads', breadsController)
-  
+
+//bakers
+const bakersController=require('./controllers/bakers_controller.js')
+app.use('/bakers', bakersController)
+
 // 404 Page
 app.get('*', (req, res) => {
   res.send('404')
